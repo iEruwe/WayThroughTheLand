@@ -23,8 +23,7 @@ public class PlatformSpawn : MonoBehaviour
             Instantiate(
                 block[Random.Range(0, block.Length)],
                 new Vector3(positions1[Random.Range( 0,2)],-4,-2),Quaternion.Euler(new Vector3(0,0,0)));
-           
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1f);//тут тоже
         }
     }
     // Update is called once per frame

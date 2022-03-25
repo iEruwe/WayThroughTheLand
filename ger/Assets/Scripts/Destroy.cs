@@ -8,6 +8,6 @@ public class Destroy : MonoBehaviour
 
     public void Start()
     {
-        Destroy(platform,14);
+        Destroy(platform,14);//сдесь все хорошо
     }
 }
