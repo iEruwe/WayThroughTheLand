@@ -5,21 +5,26 @@ using System.Threading;
 
 public class PlatformSpawn : MonoBehaviour
 {
-    public GameObject[] block;
-    public float[] positions = { 10f, 12f, 14f, 16f };
-    // Start is called before the first frame update
+    public GameObject block;
+
+  
+
+
+
     void Start()
     {
-        StartCoroutine(spaw());   
+        StartCoroutine(spaw());
+        
     }
     IEnumerator spaw()
     {
         while (true)
         {
-            Instantiate(
-                block[Random.Range(0, block.Length)],
-                new Vector3(positions[Random.Range( 0,4)],-4,-2),Quaternion.Euler(new Vector3(0,0,0)));
             yield return new WaitForSeconds(1f);
+            float random = Random.Range(5f, 10f);
+            GameObject newblock = Instantiate(block, new Vector3(random, -4, 0), Quaternion.identity);
+            Destroy(newblock, 15);
+              
         }
     }
     // Update is called once per frame
