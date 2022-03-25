@@ -5,9 +5,9 @@ using System.Threading;
 
 public class PlatformSpawn : MonoBehaviour
 {
-    public GameObject[] block;
+    public GameObject block;
 
-    public float[] positions1 = { 10f, 12f };
+  
 
 
 
@@ -20,10 +20,11 @@ public class PlatformSpawn : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(
-                block[Random.Range(0, block.Length)],
-                new Vector3(positions1[Random.Range( 0,2)],-4,-2),Quaternion.Euler(new Vector3(0,0,0)));
-                yield return new WaitForSeconds(1f);//тут тоже
+            yield return new WaitForSeconds(1f);
+            float random = Random.Range(5f, 10f);
+            GameObject newblock = Instantiate(block, new Vector3(random, -4, 0), Quaternion.identity);
+            Destroy(newblock, 15);
+              
         }
     }
     // Update is called once per frame
