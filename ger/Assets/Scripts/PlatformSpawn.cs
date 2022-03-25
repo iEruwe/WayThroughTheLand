@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading;
 
-public class spawn : MonoBehaviour
+public class PlatformSpawn : MonoBehaviour
 {
     public GameObject[] block;
     public float[] positions = { 10f, 12f, 14f, 16f };

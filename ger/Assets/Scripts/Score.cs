@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Threading;
 
-public class scor : MonoBehaviour
+public class Score : MonoBehaviour
 {
     public GameObject background;
     double score = 0, data;
