@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 936743878}
   - component: {fileID: 936743877}
   - component: {fileID: 936743880}
+  - component: {fileID: 936743881}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -553,12 +554,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfa150f3256d63439691dd311299306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: []
-  positions1:
-  - 10
-  - 12
-  - 14
-  - 16
+  block: {fileID: 0}
+--- !u!114 &936743881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936743876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfa150f3256d63439691dd311299306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  block: {fileID: 0}
 --- !u!1001 &943328145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,7 +696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1078043623
 BoxCollider2D:
@@ -1042,13 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfa150f3256d63439691dd311299306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block:
-  - {fileID: 5401576615811206357, guid: 2663802901c0cec439a28e0fd1d782ea, type: 3}
-  positions1:
-  - 10
-  - 12
-  - 14
-  - 16
+  block: {fileID: 5401576615811206357, guid: 2663802901c0cec439a28e0fd1d782ea, type: 3}
 --- !u!4 &1329340202
 Transform:
   m_ObjectHideFlags: 0
@@ -1061,7 +1064,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1579048942
 PrefabInstance:
@@ -1118,7 +1121,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockPrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2663802901c0cec439a28e0fd1d782ea, type: 3}
 --- !u!1 &1644713281
 GameObject:
@@ -1280,7 +1284,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockPrefab (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 2663802901c0cec439a28e0fd1d782ea, type: 3}
 --- !u!1 &1798728238
 GameObject:
