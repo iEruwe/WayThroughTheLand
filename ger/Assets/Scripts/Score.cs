@@ -38,8 +38,8 @@ public class Score : MonoBehaviour
         //}
     }
     
-void OnGUI()
-{
-    GUI.Box(new Rect(0, 0, Screen.width*1, Screen.height * 1f), "Distance(m): " + score);
-}
+    void OnGUI()
+    {
+        GUI.Box(new Rect(0, 0, Screen.width*1, Screen.height * 1f), "Distance(m): " + score);
+    }
 }
