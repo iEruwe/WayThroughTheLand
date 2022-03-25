@@ -11,7 +11,7 @@ public class Platform : MonoBehaviour
 
     private void Start()
     {
-       
+        
     }
     void Update()
     {
