@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 	{
 		SceneManager.LoadSceneAsync(level);
 	}
+
 	public void Exit()
 	{
 		Debug.Log("Exit pressed");
