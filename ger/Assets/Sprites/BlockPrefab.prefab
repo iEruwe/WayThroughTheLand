@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5401576615811206356}
   - component: {fileID: 5401576615811206363}
   - component: {fileID: 5401576615811206362}
-  - component: {fileID: 1030185614633480525}
   - component: {fileID: 5401576615811206361}
   m_Layer: 0
   m_Name: BlockPrefab
@@ -98,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.022819549, y: 0}
+  m_Offset: {x: 0.0017853975, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -109,21 +108,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.545639, y: 1.5}
+  m_Size: {x: 1.5035708, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &1030185614633480525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5401576615811206357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d2c232c24c13934b83e62454f99d742, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  platform: {fileID: 5401576615811206357}
 --- !u!114 &5401576615811206361
 MonoBehaviour:
   m_ObjectHideFlags: 0

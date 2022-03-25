@@ -32,10 +32,10 @@ public class Score : MonoBehaviour
             scoredata.WriteLine(score);
             scoredata.Close();
         }
-        if (score > 1000)
-        {
-            background.transform.Translate(new Vector3(-0.1f, 0f, 0f));
-        }
+        //if (score > 1000)
+        //{
+        //    background.transform.Translate(new Vector3(-0.1f, 0f, 0f));
+        //}
     }
     
 void OnGUI()
