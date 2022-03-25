@@ -10,6 +10,7 @@ public class Death : MonoBehaviour
         if(collision.tag == "Player")
         {
             Debug.Log("Player dead");
+            Time.timeScale = 0;
         }
     }
 }

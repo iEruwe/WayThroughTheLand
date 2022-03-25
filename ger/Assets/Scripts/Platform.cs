@@ -6,19 +6,10 @@ using System.IO;
 
 public class Platform : MonoBehaviour
 {
-    public GameObject block;
-    float speed = -0.01f,score = 0;
-    int f;
-    // Start is called before the first frame update
-    void Start()
-    {
-      
-    }
-
+    float speed = 2f;
   
     void Update()
     {
-        transform.Translate(new Vector3(speed, 0f, 0f));
-
+        transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
     }
 }
