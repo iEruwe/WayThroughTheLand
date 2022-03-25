@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class platform : MonoBehaviour
+public class Platform : MonoBehaviour
 {
     public GameObject block;
     float speed = -0.01f,score = 0;

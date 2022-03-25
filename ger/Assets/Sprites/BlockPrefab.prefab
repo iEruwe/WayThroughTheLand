@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5401576615811206362}
   - component: {fileID: 5401576615811206361}
   m_Layer: 0
-  m_Name: tile.EdenPlatforms_0
+  m_Name: BlockPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
