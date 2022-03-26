@@ -11,7 +11,7 @@ public class Score : MonoBehaviour
     private int score = 0;
     private int data;
     private int frame;
-    private bool isUp = false;
+    public GUIStyle mystyle; //объявляется для того чтобы изменять начертание GUI компонентов(шрифт, размер и.т.п.)
 
     void Start()
     {
