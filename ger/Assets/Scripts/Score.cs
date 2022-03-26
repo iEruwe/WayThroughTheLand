@@ -7,13 +7,12 @@ using System.Threading;
 
 public class Score : MonoBehaviour
 {
-    public GameObject background;
-    double score = 0, data;
+    //public GameObject background;
+    float score = 0;
+    float data;
 
     void Start()
     {
-       
-
         StreamReader scoredata = new StreamReader(Application.persistentDataPath + "/score.gd");
         data = float.Parse(scoredata.ReadLine());
         scoredata.Close();
@@ -22,10 +21,8 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         score = score + 1;
        
-
         if (score > data)
         {
             StreamWriter scoredata = new StreamWriter(Application.persistentDataPath + "/score.gd");
