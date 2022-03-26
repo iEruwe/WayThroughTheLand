@@ -8,20 +8,31 @@ using System.Threading;
 public class Score : MonoBehaviour
 {
     //public GameObject background;
-    float score = 0;
-    float data;
+    private int score = 0;
+    private int data;
+    private int frame;
+    private bool isUp = false;
 
     void Start()
     {
         StreamReader scoredata = new StreamReader(Application.persistentDataPath + "/score.gd");
-        data = float.Parse(scoredata.ReadLine());
+        data = int.Parse(scoredata.ReadLine());
         scoredata.Close();
+        Time.timeScale = 1;
+        Debug.Log($"{Time.timeScale}");
     }
   
     // Update is called once per frame
     void Update()
     {
-        score = score + 1;
+        frame++;
+
+        if (frame % 100 == 0)
+        {
+            score++;
+            Time.timeScale += 0.002f;
+            Debug.Log($"Speed up: {Time.timeScale}");
+        }
        
         if (score > data)
         {
