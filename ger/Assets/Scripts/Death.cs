@@ -1,18 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Death : MonoBehaviour
 {
     private GameObject platform;
-    // Start is called before the first frame update
+    public GameObject RestartB;
+    public GameObject MenuB;
+
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Player")
         {
             Debug.Log("Player dead");
             Time.timeScale = 0;
+            RestartB.gameObject.SetActive(true);
+            MenuB.gameObject.SetActive(true);
+
         }
     
     }
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(0);
+    }
+
+    //loads inputted level
+    public void LoadLevel(string level)
+    {
+        SceneManager.LoadSceneAsync(level);
+    }
+
 }

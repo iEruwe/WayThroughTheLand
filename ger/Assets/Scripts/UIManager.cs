@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
 
 	void Start()
 	{
+			Time.timeScale = 1;
 		StreamReader scoredata = new StreamReader(Application.persistentDataPath + "/score.gd"); //создание файловой переменной
 		score = scoredata.ReadLine(); //чтение строки
 		scoredata.Close(); //закрытие файловой переменной
@@ -23,8 +24,9 @@ public class UIManager : MonoBehaviour
 
 	public void Reload()  
 	{
-		// SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		SceneManager.LoadScene(0);
+		
 	}
 
 	//loads inputted level

@@ -9,6 +9,7 @@ public class PlatformSpawn : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         StartCoroutine(Spawner());
         
     }

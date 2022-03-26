@@ -13,7 +13,7 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-       
+        Time.timeScale = 1;
 
         StreamReader scoredata = new StreamReader(Application.persistentDataPath + "/score.gd");
         data = float.Parse(scoredata.ReadLine());
