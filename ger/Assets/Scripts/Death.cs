@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    private GameObject platform;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {

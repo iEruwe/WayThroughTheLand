@@ -7,8 +7,14 @@ using System.Threading;
 
 public class Score : MonoBehaviour
 {
-    public GameObject background;
-    double score = 0, data;
+   
+    public GameObject background1;
+    public GameObject background2;
+    public GameObject background3;
+    public GameObject background4;
+    public GameObject background5;
+    float score = 0, data,speed=0.3f;
+ 
 
     void Start()
     {
@@ -32,10 +38,37 @@ public class Score : MonoBehaviour
             scoredata.WriteLine(score);
             scoredata.Close();
         }
-        if (score > 1000)
-        {
-            background.transform.Translate(new Vector3(-0.1f, 0f, 0f));
-        }
+     
+        
+           
+            background1.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+            if (background1.transform.position.x < -50)
+            {
+                background1.transform.position = new Vector3(60, 0, 0);
+            }
+            background2.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+            if (background2.transform.position.x < -50)
+            {
+                background2.transform.position = new Vector3(60, 0, 0);
+            }
+            background3.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+            if (background3.transform.position.x < -50)
+            {
+                background3.transform.position = new Vector3(60, 0, 0);
+            }
+            background4.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+            if (background4.transform.position.x < -50)
+            {
+                background4.transform.position = new Vector3(60, 0, 0);
+            }
+            background5.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+            if (background5.transform.position.x < -50)
+            {
+                background5.transform.position = new Vector3(60, 0, 0);
+            }
+
+        
+       
     }
     
 void OnGUI()
