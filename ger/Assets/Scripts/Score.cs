@@ -11,6 +11,7 @@ public class Score : MonoBehaviour
     private int score = 0;
     private int data;
     private int frame;
+    public GameObject RestartB;
     public GUIStyle mystyle; //объявляется для того чтобы изменять начертание GUI компонентов(шрифт, размер и.т.п.)
 
     void Start()
@@ -27,11 +28,18 @@ public class Score : MonoBehaviour
     {
         frame++;
 
-        if (frame % 100 == 0)
+        if (RestartB)
         {
-            score++;
-            Time.timeScale += 0.002f;
-            Debug.Log($"Speed up: {Time.timeScale}");
+            Time.timeScale = 0;
+        }
+        else
+        {
+            if (frame % 100 == 0)
+            {
+                score++;
+                Time.timeScale += 0.002f;
+                Debug.Log($"Speed up: {Time.timeScale}");
+            }
         }
        
         if (score > data)
