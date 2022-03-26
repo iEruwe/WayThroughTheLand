@@ -7,6 +7,7 @@ using System.Threading;
 
 public class Score : MonoBehaviour
 {
+    public GUIStyle mystyle; //объявляется для того чтобы изменять начертание GUI компонентов(шрифт, размер и.т.п.)
     public GameObject background;
     double score = 0, data;
 
