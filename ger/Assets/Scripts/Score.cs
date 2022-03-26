@@ -7,26 +7,33 @@ using System.Threading;
 
 public class Score : MonoBehaviour
 {
+    //public GameObject background;
+    private int score = 0;
+    private int data;
+    private int frame;
     public GUIStyle mystyle; //объявляется для того чтобы изменять начертание GUI компонентов(шрифт, размер и.т.п.)
-    public GameObject background;
-    double score = 0, data;
 
     void Start()
     {
-        Time.timeScale = 1;
-
         StreamReader scoredata = new StreamReader(Application.persistentDataPath + "/score.gd");
-        data = float.Parse(scoredata.ReadLine());
+        data = int.Parse(scoredata.ReadLine());
         scoredata.Close();
+        Time.timeScale = 1;
+        Debug.Log($"{Time.timeScale}");
     }
   
     // Update is called once per frame
     void Update()
     {
+        frame++;
 
-        score = score + 1;
+        if (frame % 100 == 0)
+        {
+            score++;
+            Time.timeScale += 0.002f;
+            Debug.Log($"Speed up: {Time.timeScale}");
+        }
        
-
         if (score > data)
         {
             StreamWriter scoredata = new StreamWriter(Application.persistentDataPath + "/score.gd");
