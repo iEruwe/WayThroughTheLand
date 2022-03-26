@@ -784,11 +784,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 737b3a30b8919544a8ab1ad9f7c6b783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background1: {fileID: 0}
-  background2: {fileID: 0}
-  background3: {fileID: 0}
-  background4: {fileID: 0}
-  background5: {fileID: 0}
+  background1: {fileID: 1644713281}
+  background2: {fileID: 1004610673}
+  background3: {fileID: 964207844}
+  background4: {fileID: 1623755537}
+  background5: {fileID: 114156548}
   mystyle:
     m_Name: 
     m_Normal:
