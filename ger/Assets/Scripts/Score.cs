@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
     private float speed = 0.3f;
     private int score = 0;
     private int data;
-    private int frame;
+    private float frame;
     public GUIStyle mystyle; //объявляется для того чтобы изменять начертание GUI компонентов(шрифт, размер и.т.п.)
 
     void Start()
@@ -26,18 +26,20 @@ public class Score : MonoBehaviour
         scoredata.Close();
         Time.timeScale = 1;
         Debug.Log($"{Time.timeScale}");
+        frame = 0;
     }
   
     // Update is called once per frame
     void Update()
     {
-        frame++;
+        if (Time.timeScale > 0)
+        {
+            frame++;
+        }
 
-        if (frame % 100 == 0)
+        if ((frame % 100) == 0)
         {
             score++;
-            Time.timeScale += 0.002f;
-            Debug.Log($"Speed up: {Time.timeScale}");
         }
        
         if (score > data)

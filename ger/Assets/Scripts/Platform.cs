@@ -13,6 +13,7 @@ public class Platform : MonoBehaviour
     {
         Time.timeScale = 1;
     }
+
     void Update()
     {
         transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
