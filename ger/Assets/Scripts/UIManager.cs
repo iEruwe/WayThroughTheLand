@@ -17,19 +17,8 @@ public class UIManager : MonoBehaviour
 	void Start()
 	{
 		Time.timeScale = 1;
-		try
-		{
-			score = PlayerPrefs.GetInt("savescore");
-			scoreText.text = $"Your best score: {score}";
-		}
-		catch
-        {
-
-        }
-		finally
-        {
-			scoreText.text = $"Your best score: 0";
-		}
+		score = PlayerPrefs.GetInt("savescore");
+		scoreText.text = $"Your best score: {score}";
 	}
 
 	public void Reload()  
