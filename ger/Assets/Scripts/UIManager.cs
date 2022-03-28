@@ -21,11 +21,11 @@ public class UIManager : MonoBehaviour
 		scoreText.text = $"Your best score: {score}";
 	}
 
-	public void Reload()  
+	public void Reload()
 	{
 		//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		SceneManager.LoadScene(0);
-		
+
 	}
 
 	//loads inputted level
@@ -41,16 +41,16 @@ public class UIManager : MonoBehaviour
 	}
 
 	public void MusicVol()
-    {
+	{
 		if (MusicSlider.interactable == true)
-        {
+		{
 			MusicSlider.interactable = false;
-        }
+		}
 		else
-        {
+		{
 			MusicSlider.interactable = true;
-        }
-    }
+		}
+	}
 
 	public void SoundsVol()
 	{
@@ -63,5 +63,11 @@ public class UIManager : MonoBehaviour
 			SoundSlider.interactable = true;
 		}
 	}
+
+	/*void SetLanguage(string identifier)
+	{
+		Debug.Log("Selected language: " + identifier);
+		LocalizationSettings.SelectLocale(identifier);
+	}*/
 }
 
