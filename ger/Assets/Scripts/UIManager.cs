@@ -9,14 +9,27 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 	public Text scoreText;
+	public Slider MusicSlider;
+	public Slider SoundSlider;
 
 	private int score;
 
 	void Start()
 	{
 		Time.timeScale = 1;
-		score = PlayerPrefs.GetInt("savescore");
-		scoreText.text = $"Your best score: {score}";
+		try
+		{
+			score = PlayerPrefs.GetInt("savescore");
+			scoreText.text = $"Your best score: {score}";
+		}
+		catch
+        {
+
+        }
+		finally
+        {
+			scoreText.text = $"Your best score: 0";
+		}
 	}
 
 	public void Reload()  
@@ -36,6 +49,30 @@ public class UIManager : MonoBehaviour
 	{
 		Debug.Log("Exit pressed");
 		Application.Quit();
+	}
+
+	public void MusicVol()
+    {
+		if (MusicSlider.interactable == true)
+        {
+			MusicSlider.interactable = false;
+        }
+		else
+        {
+			MusicSlider.interactable = true;
+        }
+    }
+
+	public void SoundsVol()
+	{
+		if (SoundSlider.interactable == true)
+		{
+			SoundSlider.interactable = false;
+		}
+		else
+		{
+			SoundSlider.interactable = true;
+		}
 	}
 }
 
