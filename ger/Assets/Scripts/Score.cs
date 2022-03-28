@@ -4,43 +4,76 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Threading;
+using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public GUIStyle mystyle; //объявляется для того чтобы изменять начертание GUI компонентов(шрифт, размер и.т.п.)
-    public GameObject background;
-    double score = 0, data;
+    //public GameObject background;
+    public GameObject background1;
+    public GameObject background2;
+    public GameObject background3;
+    public GameObject background4;
+    public GameObject background5;
+    public Text scoreCounter;
+    private float speed = 0.3f;
+    private int score = 0;
+    private int data;
+    private float frame;
 
     void Start()
     {
+        data = PlayerPrefs.GetInt("savescore");
         Time.timeScale = 1;
-
-        StreamReader scoredata = new StreamReader(Application.persistentDataPath + "/score.gd");
-        data = float.Parse(scoredata.ReadLine());
-        scoredata.Close();
+        Debug.Log($"{Time.timeScale}");
+        frame = 0;
     }
   
     // Update is called once per frame
     void Update()
     {
+        scoreCounter.text = score.ToString();
 
-        score = score + 1;
+        if (Time.timeScale > 0)
+        {
+            frame++;
+        }
+
+        if ((frame % 75) == 0)
+        {
+            score++;
+        }
        
-
         if (score > data)
         {
-            StreamWriter scoredata = new StreamWriter(Application.persistentDataPath + "/score.gd");
-            scoredata.WriteLine(score);
-            scoredata.Close();
+            scoreCounter.color = Color.red;
+            PlayerPrefs.SetInt("savescore", score);
+            PlayerPrefs.Save();
+            Debug.Log("Best score saved");
         }
-        //if (score > 1000)
-        //{
-        //    background.transform.Translate(new Vector3(-0.1f, 0f, 0f));
-        //}
-    }
-    
-    void OnGUI()
-    {
-        GUI.Box(new Rect(0, 0, Screen.width*1, Screen.height * 1f), "Distance(m): " + score);
+        background1.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+        if (background1.transform.position.x < -50)
+        {
+            background1.transform.position = new Vector3(60, 0, 0);
+        }
+        background2.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+        if (background2.transform.position.x < -50)
+        {
+            background2.transform.position = new Vector3(60, 0, 0);
+        }
+        background3.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+        if (background3.transform.position.x < -50)
+        {
+            background3.transform.position = new Vector3(60, 0, 0);
+        }
+        background4.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+        if (background4.transform.position.x < -50)
+        {
+            background4.transform.position = new Vector3(60, 0, 0);
+        }
+        background5.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
+        if (background5.transform.position.x < -50)
+        {
+            background5.transform.position = new Vector3(60, 0, 0);
+        }
     }
 }

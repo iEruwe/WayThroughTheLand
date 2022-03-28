@@ -21,7 +21,6 @@ public class Death : MonoBehaviour
             Time.timeScale = 0;
             RestartB.gameObject.SetActive(true);
             MenuB.gameObject.SetActive(true);
-
         }
     
     }
