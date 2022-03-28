@@ -338,6 +338,7 @@ MonoBehaviour:
   background4: {fileID: 1623755537}
   background5: {fileID: 114156548}
   scoreCounter: {fileID: 822774753}
+  score: 0
 --- !u!1001 &345370246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -724,6 +725,7 @@ MonoBehaviour:
   background4: {fileID: 1623755537}
   background5: {fileID: 114156548}
   scoreCounter: {fileID: 822774753}
+  score: 0
 --- !u!114 &822774753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,7 +847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edfa150f3256d63439691dd311299306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  block: {fileID: 5401576615811206357, guid: 2663802901c0cec439a28e0fd1d782ea, type: 3}
+  score: 0
+  block1: {fileID: 5401576615811206357, guid: 2663802901c0cec439a28e0fd1d782ea, type: 3}
+  block2: {fileID: 19215647311272128, guid: 9ca67e923b3becf4e84602243557871f, type: 3}
 --- !u!1001 &943328145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,7 +1091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1078043620
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
     public GameObject background5;
     public Text scoreCounter;
     private float speed = 0.3f;
-    private int score = 0;
+    public int score = 0;
     private int data;
     private float frame;
 

@@ -5,7 +5,11 @@ using System.Threading;
 
 public class PlatformSpawn : MonoBehaviour
 {
-    public GameObject block;
+    public int score = 0;
+    private float frame;
+    private GameObject block;
+    public GameObject block1;
+    public GameObject block2;
 
     void Start()
     {
@@ -13,14 +17,38 @@ public class PlatformSpawn : MonoBehaviour
         StartCoroutine(Spawner());
         
     }
+    private void Update()
+    {
+        if (Time.timeScale > 0)
+        {
+            frame++;
+        }
+
+        if ((frame % 75) == 0)
+        {
+            score++;
+        }
+    }
     IEnumerator Spawner()
     {
         while (true)
-        {
-            float random = Random.Range(6f, 8f);
-            GameObject newblock = Instantiate(block, new Vector3(5 + random, -4.1f, 0), Quaternion.identity);
-            Destroy(newblock, 15);
+        { if (score <10 )
+            { 
+                block = block1; 
+            }
+        else
+            {
+                block = block2;
+            }
+            float random1 = Random.Range(6f, 8f);
+                GameObject newblock1 = Instantiate(block, new Vector3(5 + random1, -4.1f, 0), Quaternion.identity);
+                Destroy(newblock1, 15);
+           
+           
+          
             yield return new WaitForSeconds(2f);
         }
+       
+        
     }
 }
