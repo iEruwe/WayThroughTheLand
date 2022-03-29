@@ -8,14 +8,13 @@ public class PlatformSpawn : MonoBehaviour
     public int score = 0;
     private float frame;
     private GameObject block;
-    public GameObject block1;
-    public GameObject block2;
+    public GameObject mountBlock;
+    public GameObject forestBlock;
 
     void Start()
     {
         Time.timeScale = 1;
         StartCoroutine(Spawner());
-        
     }
     private void Update()
     {
@@ -32,19 +31,19 @@ public class PlatformSpawn : MonoBehaviour
     IEnumerator Spawner()
     {
         while (true)
-        { if (score <10 )
+        {
+            if (score < 10)
             { 
-                block = block1; 
+                block = mountBlock; 
             }
-        else
+            else
             {
-                block = block2;
+                block = forestBlock;
             }
+
             float random1 = Random.Range(6f, 8f);
-                GameObject newblock1 = Instantiate(block, new Vector3(5 + random1, -4.1f, 0), Quaternion.identity);
-                Destroy(newblock1, 15);
-           
-           
+            GameObject newblock1 = Instantiate(block, new Vector3(5 + random1, -4.1f, 0), Quaternion.identity);
+            Destroy(newblock1, 15);
           
             yield return new WaitForSeconds(2f);
         }

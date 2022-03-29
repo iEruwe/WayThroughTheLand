@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    private GameObject platform;
     public GameObject RestartB;
     public GameObject MenuB;
 
@@ -22,19 +21,15 @@ public class Death : MonoBehaviour
             RestartB.gameObject.SetActive(true);
             MenuB.gameObject.SetActive(true);
         }
-    
     }
 
-    public void Reload()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene(0);
-    }
-
-    //loads inputted level
     public void LoadLevel(string level)
     {
         SceneManager.LoadSceneAsync(level);
     }
 
+    public void Reload()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
