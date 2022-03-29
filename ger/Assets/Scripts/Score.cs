@@ -8,15 +8,14 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    //public GameObject background;
     public GameObject background1;
     public GameObject background2;
     public GameObject background3;
     public GameObject background4;
     public GameObject background5;
     public Text scoreCounter;
-    private float speed = 0.3f;
-    public int score = 0;
+    public float speed = 0.03f;
+    private int score = 0;
     private int data;
     private float frame;
 
@@ -50,30 +49,35 @@ public class Score : MonoBehaviour
             PlayerPrefs.Save();
             Debug.Log("Best score saved");
         }
+
         background1.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         if (background1.transform.position.x < -50)
         {
-            background1.transform.position = new Vector3(60, 0, 0);
+            background1.transform.position = new Vector3(125, 0, 0);
         }
+
         background2.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         if (background2.transform.position.x < -50)
         {
-            background2.transform.position = new Vector3(60, 0, 0);
+            background2.transform.position = new Vector3(125, 0, 0);
         }
+
         background3.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         if (background3.transform.position.x < -50)
         {
-            background3.transform.position = new Vector3(60, 0, 0);
+            background3.transform.position = new Vector3(125, 0, 0);
         }
+
         background4.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         if (background4.transform.position.x < -50)
         {
-            background4.transform.position = new Vector3(60, 0, 0);
+            background4.transform.position = new Vector3(125, 0, 0);
         }
+
         background5.transform.Translate(new Vector3(-speed * Time.deltaTime, 0f, 0f));
         if (background5.transform.position.x < -50)
         {
-            background5.transform.position = new Vector3(60, 0, 0);
+            background5.transform.position = new Vector3(125, 0, 0);
         }
     }
 }

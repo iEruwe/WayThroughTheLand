@@ -10,6 +10,7 @@ public class PlatformSpawn : MonoBehaviour
     private GameObject block;
     public GameObject mountBlock;
     public GameObject forestBlock;
+    private int blockNum = 1;
 
     void Start()
     {
@@ -27,18 +28,39 @@ public class PlatformSpawn : MonoBehaviour
         {
             score++;
         }
+
+        if (score == 300)
+        {
+            score = 0;
+            blockNum++;
+        }
     }
     IEnumerator Spawner()
     {
         while (true)
         {
-            if (score < 10)
-            { 
-                block = mountBlock; 
-            }
-            else
+            if (blockNum > 5)
             {
-                block = forestBlock;
+                blockNum = 1;
+            }
+
+            switch (blockNum)
+            {
+                case 1:
+                    block = mountBlock;
+                    break;
+                case 2:
+                    block = forestBlock;
+                    break;
+                case 3:
+                    block = mountBlock;
+                    break;
+                case 4:
+                    block = forestBlock;
+                    break;
+                case 5:
+                    block = mountBlock;
+                    break;
             }
 
             float random1 = Random.Range(6f, 8f);
@@ -47,7 +69,5 @@ public class PlatformSpawn : MonoBehaviour
           
             yield return new WaitForSeconds(2f);
         }
-       
-        
     }
 }
