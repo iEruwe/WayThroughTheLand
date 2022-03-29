@@ -9,18 +9,30 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D player;
     private Animator animator;
-    private Sensor_Bandit groundSensor;
+    private GroundSensor groundSensor;
     private bool isGrounded = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         player = GetComponent<Rigidbody2D>();
-        groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
+        groundSensor = transform.Find("GroundSensor").GetComponent<GroundSensor>();
         Time.timeScale = 1;
     }
     void Update()
     {
+        if (!isGrounded && groundSensor.State())
+        {
+            isGrounded = true;
+            animator.SetBool("Grounded", isGrounded);
+        }
+
+        if (isGrounded && !groundSensor.State())
+        {
+            isGrounded = false;
+            animator.SetBool("Grounded", isGrounded);
+        }
+
         float inputX = Input.GetAxis("Horizontal");
 
         if (inputX > 0)
