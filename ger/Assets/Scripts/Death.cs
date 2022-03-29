@@ -21,18 +21,15 @@ public class Death : MonoBehaviour
             RestartB.gameObject.SetActive(true);
             MenuB.gameObject.SetActive(true);
         }
-    
+    }
+
+    public void LoadLevel(string level)
+    {
+        SceneManager.LoadSceneAsync(level);
     }
 
     public void Reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
-    //loads inputted level
-    public void LoadLevel(string level)
-    {
-        SceneManager.LoadSceneAsync(level);
-    }
-
 }
