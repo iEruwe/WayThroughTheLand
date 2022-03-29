@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    private GameObject platform;
     public GameObject RestartB;
     public GameObject MenuB;
 
@@ -28,7 +27,6 @@ public class Death : MonoBehaviour
     public void Reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene(0);
     }
 
     //loads inputted level
