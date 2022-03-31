@@ -35,16 +35,9 @@ public class Player : MonoBehaviour
 
         float inputX = Input.GetAxis("Horizontal");
 
-        if (inputX > 0)
-        {
-            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-        }
-        else if (inputX < 0)
-        {
-            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        }
+      
 
-        player.velocity = new Vector2(inputX * playerSpeed, player.velocity.y);
+       
 
         if (Input.GetKeyDown("space") && isGrounded)
         {
@@ -60,9 +53,5 @@ public class Player : MonoBehaviour
             animator.SetInteger("AnimState", 2);
         }
 
-        else
-        {
-            animator.SetInteger("AnimState", 0);
-        }
     }
 }
