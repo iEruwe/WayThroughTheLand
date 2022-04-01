@@ -1619,7 +1619,6 @@ GameObject:
   - component: {fileID: 843316974}
   - component: {fileID: 843316976}
   - component: {fileID: 843316975}
-  - component: {fileID: 843316977}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1688,19 +1687,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843316973}
   m_CullTransparentMesh: 1
---- !u!114 &843316977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843316973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de5ffedf483e4847b8f8945a87bc668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  energiCounter: {fileID: 1346715293}
 --- !u!1 &891230383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de5ffedf483e4847b8f8945a87bc668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energiCounter: {fileID: 0}
+  energiCounter: {fileID: 1346715293}
 --- !u!1 &906421530
 GameObject:
   m_ObjectHideFlags: 0
