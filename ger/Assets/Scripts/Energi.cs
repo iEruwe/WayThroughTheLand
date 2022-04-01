@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Energi : MonoBehaviour
 {
     static int maxenergi =5;
-   public static int energi = 5;
+    public static int energi = 5;
     public Text energiCounter;
 
     void Start()
