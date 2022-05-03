@@ -31,7 +31,15 @@ public class UIManager : MonoBehaviour
 	//loads inputted level
 	public void LoadLevel(string level)
 	{
-		SceneManager.LoadSceneAsync(level);
+		if (Energi.energi == 0)
+		{
+
+		}
+		else
+		{ 
+			SceneManager.LoadSceneAsync(level);
+		}
+	
 	}
 
 	public void Exit()
